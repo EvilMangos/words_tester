@@ -2,8 +2,9 @@ const allWords = require("./workProcess/allWords");
 const someWords = require("./workProcess/someWords");
 
 module.exports = (pairs, settings) => {
+  pairs.shift();
   if (settings.count != 0) {
-    pairs = pairs.splice(settings.count, pairs.length - settings.count);
+    pairs = pairs.splice(pairs.length - settings.count);
   }
 
   if (settings.language == 1) {

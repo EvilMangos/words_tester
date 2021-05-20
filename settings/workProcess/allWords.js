@@ -5,7 +5,7 @@ module.exports = (pairs) => {
   let size = pairs.length;
   console.log("Start");
   for (let i = 0; i < size; i++) {
-    let t = getRandomInt(pairs.length) - 1;
+    let t = getRandomInt(pairs.length - 1);
     cache.set(pairs[t], interface(pairs[t]));
     pairs.splice(t, 1);
   }
